@@ -1,15 +1,6 @@
-
 import numpy as np
+import pandas as pd
 
-import matplotlib.pyplot as plt
-import PIL
-import urllib.request
-
-image_url_rgb = "https://codeinstitute.s3.amazonaws.com/predictive_analytics/jupyter_notebook_images/Numpy_rainbow.png"
-image_rgb = PIL.Image.open(urllib.request.urlopen(image_url_rgb))
-#plt.imread(image_url_rgb) is depricated
-np_image_rgb = np.array(image_rgb)
-print(f"* Array shape: {np_image_rgb.shape} ===> 3 channels (RGB)")
-arr = np.random.randint(low=0,high=255,size=(300,500,3))
-plt.imshow(arr)
-plt.show()
+dict1 = {'Item1':[9,9,7,1], 'Item2':[8,6,68,8], 'Item3':[1,2,7,8]}
+df = pd.DataFrame(dict1)
+print(df)
